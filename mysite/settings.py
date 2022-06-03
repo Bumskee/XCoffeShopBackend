@@ -144,5 +144,5 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'https://localhost:3000',
     'http://localhost:3000',
-    'https://wads-week10-quiz.vercel.app'
+    'https://herosname-react-frontend.vercel.app'
 )
