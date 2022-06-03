@@ -27,9 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'characternames-backend.herokuapp.com']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'myapi',
     'django.contrib.admin',
@@ -41,8 +39,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders'
 ]
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -129,3 +125,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+SITE_ID = 1
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+    'wads-week10-quiz.vercel.app'
+)
