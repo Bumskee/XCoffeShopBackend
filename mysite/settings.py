@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'CLIENT': {
             "host": "mongodb+srv://test:test@bumskeecluster.xak9j.mongodb.net/?retryWrites=true&w=majority",
-            "name": "herosdb",
+            "name": "XCoffeeShop",
             "authMechanism":"SCRAM-SHA-1"
         }
     }

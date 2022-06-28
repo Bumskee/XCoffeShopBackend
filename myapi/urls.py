@@ -7,6 +7,6 @@ from myapi import views
 
 urlpatterns = [
     # path('', include(router.urls)),
-    re_path(r'^heroes$', views.herosApi),
-    re_path(r'^heroes/([0-9]+)$', views.herosApi)
+    re_path(r'^menues$', views.menuesApi),
+    re_path(r'^menues/([0-9]+)$', views.menuesApi)
 ]

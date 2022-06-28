@@ -1,8 +1,8 @@
 from rest_framework import serializers
 
-from .models import Hero
+from .models import Menues
 
-class HeroSerializer(serializers.ModelSerializer):
+class MenuesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Hero
-        fields = ('heros_id', 'name', 'alias')
+        model = Menues
+        fields = ('menues_id', 'name', 'price')
