@@ -1,10 +1,11 @@
 # from rest_framework import viewsets
-from django.shortcuts import render
+from rest_framework import viewsets
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
+from django.contrib.auth.models import User
 
-from .serializers import MenuesSerializer
+from .serializers import MenuesSerializer, UserSerializer
 from .models import Menues
 
 # class HeroViewSet (viewsets.ModelViewSet):
@@ -12,6 +13,10 @@ from .models import Menues
 #     serializer_class = HeroSerializer
 
 # Create your views here.
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 @csrf_exempt
 def menuesApi(request, id=0):
