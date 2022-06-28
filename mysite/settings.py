@@ -144,5 +144,6 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'https://localhost:3000',
     'http://localhost:3000',
-    'https://herosname-react-frontend.vercel.app'
+    'https://herosname-react-frontend.vercel.app',
+    'https://lyfe-is-pain.herokuapp.com'
 )
